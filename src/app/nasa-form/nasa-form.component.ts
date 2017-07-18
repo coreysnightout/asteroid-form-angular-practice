@@ -17,7 +17,7 @@ export class NasaFormComponent {
   saveRoids(startDate: string, endDate: string) {
     this.asteroidsService.getAsteroidsByDateRange(startDate, endDate).subscribe(response => {
       this.asteroids = response.json();//this gives us the whole response in json form
-      console.log(response.json());
+      console.log(response.json().near_earth_objects["2016-12-28"]);
     })
   }
 

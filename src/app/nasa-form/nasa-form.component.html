@@ -9,5 +9,6 @@
   </div>
   <button (click)="saveRoids(startDate.value, endDate.value)">push da button</button>
 </form>
-
-<app-nasa-list></app-nasa-list>
+<div *ngIf='asteroids'>
+  <app-nasa-list [childAsteroids]='asteroids'></app-nasa-list>
+</div>
