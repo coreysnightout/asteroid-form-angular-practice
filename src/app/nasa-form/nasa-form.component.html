@@ -1,0 +1,13 @@
+<form>
+  <div class="form-group">
+    <label for="start_date">Start Date</label>
+    <input type="date" #startDate>
+  </div>
+  <div class="form-group">
+    <label for="end_date">End Date</label>
+    <input type="date" #endDate>
+  </div>
+  <button (click)="saveRoids(startDate.value, endDate.value)">push da button</button>
+</form>
+
+<app-nasa-list></app-nasa-list>
