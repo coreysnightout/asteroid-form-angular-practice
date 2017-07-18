@@ -1,9 +1,9 @@
 <h1>Asteroids Near Earth</h1>
 <!-- <h2> From {{childAsteroids.near_earth_objects["2017-07-18"]}}</h2> -->
-<div *ngFor='let child of childAsteroids.near_earth_objects["2017-07-18"]'>
+<div *ngFor='let child of childAsteroids.near_earth_objects[childDate]'>
 <h2>{{child.name}}</h2>
 <h4>{{child.is_potentially_hazardous_asteroid}}</h4>
 <h6>{{child.absolute_magnitude_h}}</h6>
-<img src="http://www.nasa.gov/sites/default/files/thumbnails/image/edu_asteroid_large.jpg" alt="" />
+<img src="http://www.nasa.gov/sites/default/files/thumbnails/image/edu_asteroid_large.jpg " alt="" />
 <!-- <h4>{{child.}} -->
 </div>

@@ -11,14 +11,19 @@ import { Observable } from 'rxjs/Observable';
 })
 export class NasaFormComponent {
   asteroids: any[]=null;
+  date: string = null;
 
   constructor(private router: Router, private asteroidsService: AsteroidServiceService) { }
 
   saveRoids(startDate: string, endDate: string) {
     this.asteroidsService.getAsteroidsByDateRange(startDate, endDate).subscribe(response => {
       this.asteroids = response.json();//this gives us the whole response in json form
-      console.log(response.json().near_earth_objects["2016-12-28"]);
+      console.log(response.json().near_earth_objects[this.date]);
     })
+  }
+
+  saveDate(date) {
+    this.date = date;
   }
 
 }
